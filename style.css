@@ -3,6 +3,7 @@ body {
     font-family: 'Montserrat', Arial, sans-serif;
     background: #f4f7fb;
     color: #1b2233;
+    padding-bottom: 72px;
 }
 
 .container {
@@ -52,6 +53,7 @@ nav a {
 
 nav a:hover {
     color: #efc75e;
+    text-decoration: underline;
 }
 
 section {
@@ -81,4 +83,55 @@ footer {
     letter-spacing: 1px;
     font-size: 1rem;
     z-index: 10;
+}
+
+/* Responsive: ≤ 600px */
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+        padding: 0 0.5rem;
+    }
+
+    header {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    header h1 {
+        display: block;
+        font-size: 1.75rem;
+        letter-spacing: 1.5px;
+    }
+
+    nav {
+        float: none;
+        display: block;
+        margin-top: 0.6rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+
+    section {
+        margin: 1.2rem 0;
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+    }
 }

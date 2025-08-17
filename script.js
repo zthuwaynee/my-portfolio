@@ -32,6 +32,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+const filterBtns = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".project-card");
+if (filterBtns.length && cards.length) {
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+      const f = btn.dataset.filter;
+      cards.forEach(c => {
+        const ok = f === "all" || c.dataset.category === f;
+        c.style.display = ok ? "block" : "none";
+      });
+    });
+  });
+}
+
+
   const form = document.getElementById("contactForm");
   if (form) {
     const errorsEl = document.getElementById("formErrors");

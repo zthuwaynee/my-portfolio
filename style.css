@@ -150,6 +150,17 @@ footer {
   color: var(--fg);
 }
 
+nav button#themeToggle {
+  background: none;
+  border: 1px solid var(--brand-fg);
+  color: var(--brand-fg);
+  padding: .35rem .6rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+nav button#themeToggle:hover { background: var(--brand-fg); color: var(--brand); }
+
+
 .contact-form button {
   background: var(--accent);
   color: #fff;

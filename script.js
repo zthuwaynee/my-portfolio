@@ -1,4 +1,22 @@
+(function(){
+  const saved = localStorage.getItem("theme");
+  if (saved) document.documentElement.setAttribute("data-theme", saved);
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("themeToggle");
+  if (toggle) {
+    const initial = document.documentElement.getAttribute("data-theme") || "light";
+    toggle.textContent = initial === "dark" ? "☀️" : "🌙";
+    toggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme") || "light";
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      toggle.textContent = next === "dark" ? "☀️" : "🌙";
+    });
+  }
+
   const toggles = document.querySelectorAll(".toggle-details");
   toggles.forEach(btn => {
     btn.addEventListener("click", () => {

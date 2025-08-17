@@ -23,38 +23,52 @@
   <section>
     <div class="container">
       <h2>Projects</h2>
-      <p>Selected work with links to live demos and code.</p>
+      <p>Selected work with links to live demos and code. Click to reveal details.</p>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <h2>Featured</h2>
       <div class="projects-grid">
         <article class="project-card">
           <h3>Weather App</h3>
-          <p>Vanilla JS app using Fetch API to display current weather.</p>
-          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-          <p><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+          <p>Vanilla JS + Fetch API</p>
+          <button class="toggle-details">Show Details</button>
+          <div class="details" hidden>
+            <p>Uses OpenWeather and async/await to display conditions by city.</p>
+            <p><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+          </div>
         </article>
+
         <article class="project-card">
           <h3>Task Tracker</h3>
-          <p>Simple task manager with localStorage persistence.</p>
-          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-          <p><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+          <p>LocalStorage persistence</p>
+          <button class="toggle-details">Show Details</button>
+          <div class="details" hidden>
+            <p>Create, edit, delete tasks with simple status filtering.</p>
+            <p><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+          </div>
         </article>
+
         <article class="project-card">
           <h3>Landing Page</h3>
-          <p>Responsive landing page with semantic HTML and modern CSS.</p>
-          <p><strong>Tech:</strong> HTML, CSS</p>
-          <p><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+          <p>Responsive HTML/CSS</p>
+          <button class="toggle-details">Show Details</button>
+          <div class="details" hidden>
+            <p>Semantic HTML, modern CSS, and responsive layout techniques.</p>
+            <p><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
+ 
+
   <footer>
     <div class="container">© 2025 Zainulabdeen Al-Thuwaynee</div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

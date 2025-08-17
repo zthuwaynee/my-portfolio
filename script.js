@@ -50,6 +50,7 @@ document.querySelectorAll("nav a").forEach(a => {
 });
 
 
+
 const filterBtns = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".project-card");
 if (filterBtns.length && cards.length) {
@@ -68,23 +69,30 @@ if (filterBtns.length && cards.length) {
 
 
   const form = document.getElementById("contactForm");
-  if (form) {
-    const errorsEl = document.getElementById("formErrors");
-    form.addEventListener("submit", e => {
-      errorsEl.textContent = "";
-      const name = form.elements.name;
-      const email = form.elements.email;
-      const message = form.elements.message;
-      let ok = true;
-      [name,email,message].forEach(i => i.classList.remove("input-error"));
-      if (!name.value.trim()) { ok = false; name.classList.add("input-error"); }
-      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-      if (!emailOk) { ok = false; email.classList.add("input-error"); }
-      if (message.value.trim().length < 10) { ok = false; message.classList.add("input-error"); }
-      if (!ok) {
-        e.preventDefault();
-        errorsEl.textContent = "Please complete all fields with a valid email and a message of at least 10 characters.";
-      }
-    });
-  }
+if (form) {
+  const errorsEl = document.getElementById("formErrors");
+  form.addEventListener("submit", e => {
+    errorsEl.textContent = "";
+    const successEl = document.getElementById("formSuccess");
+    if (successEl) successEl.textContent = "";
+    const name = form.elements.name;
+    const email = form.elements.email;
+    const message = form.elements.message;
+    let ok = true;
+    [name,email,message].forEach(i => i.classList.remove("input-error"));
+    if (!name.value.trim()) { ok = false; name.classList.add("input-error"); }
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    if (!emailOk) { ok = false; email.classList.add("input-error"); }
+    if (message.value.trim().length < 10) { ok = false; message.classList.add("input-error"); }
+    if (!ok) {
+      e.preventDefault();
+      errorsEl.textContent = "Please complete all fields with a valid email and a message of at least 10 characters.";
+    } else {
+      e.preventDefault();
+      if (successEl) successEl.textContent = "Your message has been sent, thanks! :)";
+      form.reset();
+    }
+  });
+}
+
 });

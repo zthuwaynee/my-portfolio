@@ -43,6 +43,12 @@ const onScroll = () => {
 window.addEventListener("scroll", onScroll);
 onScroll();
 
+const here = location.pathname.split("/").pop() || "index.html";
+document.querySelectorAll("nav a").forEach(a => {
+  const href = a.getAttribute("href");
+  if (href && href === here) a.classList.add("active");
+});
+
 
 const filterBtns = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".project-card");

@@ -1,10 +1,34 @@
+:root {
+  --bg: #f4f7fb;
+  --fg: #1b2233;
+  --brand: #1a2332;
+  --brand-fg: #f3f6f9;
+  --accent: #29569c;
+  --accent-2: #1f447a;
+  --muted: #b1c4e0;
+  --card-bg: #ffffff;
+  --shadow: #b0b6bb15;
+}
+
+[data-theme="dark"] {
+  --bg: #0e1420;
+  --fg: #dfe6f3;
+  --brand: #0b101a;
+  --brand-fg: #dfe6f3;
+  --accent: #6aa2ff;
+  --accent-2: #5385d1;
+  --muted: #7f96bd;
+  --card-bg: #151d2b;
+  --shadow: #00000025;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   font-family: 'Montserrat', Arial, sans-serif;
-  background: #f4f7fb;
-  color: #1b2233;
+  background: var(--bg);
+  color: var(--fg);
   padding-bottom: 72px;
 }
 
@@ -16,8 +40,8 @@ body {
 }
 
 header {
-  background: #1a2332;
-  color: #f3f6f9;
+  background: var(--brand);
+  color: var(--brand-fg);
   padding: 1.3rem 0 1.1rem 0;
 }
 
@@ -44,7 +68,7 @@ nav ul {
 nav li { margin-left: 2rem; }
 
 nav a {
-  color: #f3f6f9;
+  color: var(--brand-fg);
   text-decoration: none;
   font-size: 1.05rem;
   letter-spacing: 1px;
@@ -54,23 +78,23 @@ nav a {
 nav a:hover { color: #efc75e; text-decoration: underline; }
 
 section {
-  background: #fff;
+  background: var(--card-bg);
   margin: 2.2rem 0;
   padding: 2.5rem 1.5rem;
   border-radius: 14px;
-  box-shadow: 0 1px 10px #b0b6bb15;
+  box-shadow: 0 1px 10px var(--shadow);
 }
 
 section h2 {
   margin-top: 0;
-  color: #29569c;
+  color: var(--accent);
   font-size: 1.5rem;
   margin-bottom: 0.7rem;
 }
 
 footer {
-  background: #1a2332;
-  color: #b1c4e0;
+  background: var(--brand);
+  color: var(--muted);
   text-align: center;
   padding: 0.95rem 0;
   position: fixed;
@@ -89,9 +113,9 @@ footer {
 }
 
 .project-card {
-  background: #fff;
+  background: var(--card-bg);
   border-radius: 12px;
-  box-shadow: 0 1px 10px #b0b6bb15;
+  box-shadow: 0 1px 10px var(--shadow);
   padding: 1.2rem;
 }
 
@@ -99,13 +123,15 @@ footer {
 
 .toggle-details {
   margin-top: .5rem;
-  background: #29569c;
+  background: var(--accent);
   color: #fff;
   border: 0;
   padding: .6rem .9rem;
   border-radius: 8px;
   cursor: pointer;
 }
+
+.toggle-details:hover { background: var(--accent-2); }
 
 .toggle-details:focus { outline: 2px solid #efc75e; }
 
@@ -120,16 +146,18 @@ footer {
   border-radius: 8px;
   border: 1px solid #d5dbe3;
   box-sizing: border-box;
+  background: var(--card-bg);
+  color: var(--fg);
 }
 
 .contact-form button {
-  background: #29569c;
+  background: var(--accent);
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
-.contact-form button:hover { background: #1f447a; }
+.contact-form button:hover { background: var(--accent-2); }
 
 #formErrors { color: #b00020; margin-top: .5rem; }
 

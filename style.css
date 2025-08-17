@@ -168,6 +168,18 @@ nav button#themeToggle:hover { background: var(--brand-fg); color: var(--brand);
   cursor: pointer;
 }
 
+.filters { margin-bottom: 1rem; display: flex; gap: .5rem; flex-wrap: wrap; }
+.filter-btn {
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--fg);
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.filter-btn.is-active { background: var(--accent); color: #fff; }
+
+
 .contact-form button:hover { background: var(--accent-2); }
 
 #formErrors { color: #b00020; margin-top: .5rem; }

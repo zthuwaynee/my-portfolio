@@ -17,7 +17,6 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="index.html">Home</a></li>
                       <li><button id="themeToggle" type="button">🌙</button></li>
-
         </ul>
       </nav>
     </div>
@@ -28,6 +27,46 @@
       <p>Selected work with links to live demos and code. Click to reveal details.</p>
     </div>
   </section>
+  <section>
+  <div class="container">
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="javascript">JavaScript</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="htmlcss">HTML/CSS</button>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card" data-category="javascript">
+        <h3>Weather App</h3>
+        <p>Vanilla JS + Fetch API</p>
+        <button class="toggle-details">Show Details</button>
+        <div class="details" hidden>
+          <p>Uses OpenWeather and async/await to display conditions by city.</p>
+          <p><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+        </div>
+      </article>
+      <article class="project-card" data-category="react">
+        <h3>Task Tracker</h3>
+        <p>LocalStorage persistence</p>
+        <button class="toggle-details">Show Details</button>
+        <div class="details" hidden>
+          <p>Create, edit, delete tasks with simple status filtering.</p>
+          <p><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+        </div>
+      </article>
+      <article class="project-card" data-category="htmlcss">
+        <h3>Landing Page</h3>
+        <p>Responsive HTML/CSS</p>
+        <button class="toggle-details">Show Details</button>
+        <div class="details" hidden>
+          <p>Semantic HTML, modern CSS, and responsive layout techniques.</p>
+          <p><a href="#" target="_blank">Live</a> • <a href="#" target="_blank">Code</a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
   <section>
     <div class="container">
       <div class="projects-grid">

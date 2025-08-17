@@ -160,6 +160,10 @@ nav button#themeToggle {
 }
 nav button#themeToggle:hover { background: var(--brand-fg); color: var(--brand); }
 
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 2.5s ease, transform .5s ease; }
+.reveal.active { opacity: 1; transform: none; }
+
+
 
 .contact-form button {
   background: var(--accent);

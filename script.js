@@ -32,6 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+const reveals = document.querySelectorAll(".reveal");
+const onScroll = () => {
+  const h = window.innerHeight;
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < h - 80) el.classList.add("active");
+  });
+};
+window.addEventListener("scroll", onScroll);
+onScroll();
+
+
 const filterBtns = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".project-card");
 if (filterBtns.length && cards.length) {

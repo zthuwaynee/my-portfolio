@@ -3,8 +3,8 @@
   --fg: #1b2233;
   --brand: #1a2332;
   --brand-fg: #f3f6f9;
-  --accent: #29569c;
-  --accent-2: #1f447a;
+  --accent: #2e7d32;   
+  --accent-2: #1b5e20; 
   --muted: #b1c4e0;
   --card-bg: #ffffff;
   --shadow: #b0b6bb15;
@@ -15,8 +15,8 @@
   --fg: #dfe6f3;
   --brand: #0b101a;
   --brand-fg: #dfe6f3;
-  --accent: #6aa2ff;
-  --accent-2: #5385d1;
+  --accent: #66bb6a;  
+  --accent-2: #388e3c; 
   --muted: #7f96bd;
   --card-bg: #151d2b;
   --shadow: #00000025;
@@ -29,7 +29,7 @@ body {
   font-family: 'Montserrat', Arial, sans-serif;
   background: var(--bg);
   color: var(--fg);
-  padding-bottom: 72px;
+  padding-bottom: 90px;
 }
 
 .container {
@@ -68,11 +68,27 @@ nav ul {
 nav li { margin-left: 2rem; }
 
 nav a {
+  position: relative;
   color: var(--brand-fg);
   text-decoration: none;
   font-size: 1.05rem;
   letter-spacing: 1px;
-  transition: color 0.18s;
+  padding-bottom: 4px; 
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px; 
+  background-color: var(--accent);
+  transition: width 0.3s ease;
 }
 
 nav a:hover { color: #efc75e; text-decoration: underline; }
